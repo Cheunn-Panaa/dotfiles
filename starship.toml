@@ -1,1 +1,69 @@
-starship.toml
+[cmd_duration]
+min_time = 500
+format = "underwent [$duration]($style)"
+show_notifications = true
+
+# Replace the "❯" symbol in the prompt
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+truncation_symbol = "…/"
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+
+[time]
+time_format = "%T"
+style = "white"
+disabled = false
+
+[username]
+style_user = "bold dimmed blue"
+show_always = false
+
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[package]
+disabled = true
+
+# GIT Section
+[git_branch]
+symbol = ""
+style = "bright white"
+format = '[git:\([$branch](bold red)\)]($style) '
+
+[git_status]
+format='([$all_status$ahead_behind]($style) )'
+
+# Language Section
+
+[gcloud]
+disabled = true
+
+[ruby]
+disabled = false
+format = '[ruby:\([$version](bold red)\)](bright white) '
+
+[nodejs]
+disabled = false
+format = '[node:\([$version](bold green)\)](bright white) '
+
+[python]
+disabled = true
+#style = "bold green"
+
+[golang]
+disabled = true
+
+[terraform]
+disabled = false
+format = '[tf:\([$workspace](bold 105)\)](bright white) '

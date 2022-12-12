@@ -27,3 +27,4 @@ alias bonemine-bash='steeple-lcl && docker-compose run --rm bonemine bash'
 alias obelix-bash='steeple-lcl && docker-compose run --rm obelix bash'
 
 alias git-clean='~/.config/scripts/git-clean.sh'
+alias s-tmux='~/.config/fish/function/start-tmux.sh'

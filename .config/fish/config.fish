@@ -1,7 +1,7 @@
 
 # Remove fish default greeting
-set --erase fish_greeting
-# so our brew install override the commands from the system
+ set fish_greeting
+#so our brew install override the commands from the system
 set -x PATH /usr/local/sbin $PATH
 
 # Set locale

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+pushd "$DOTFILES"
+IFS=',' read -ra folders <<< "$STOW_FOLDERS"
+
+for folder in "${folders[@]}"; do
+    echo "stow $folder"
+    #stow -D $folder
+    stow -S $folder
+done
+popd

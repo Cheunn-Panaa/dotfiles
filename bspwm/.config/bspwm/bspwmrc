@@ -1,0 +1,57 @@
+#! /bin/sh
+
+pgrep sxhkd || sxhkd &
+
+picom &
+dunst &
+
+bspc monitor -d 1 2 3 4 5
+
+# Swallow
+
+xsetroot -cursor_name left_ptr &
+xset -dpms s off & # disable screen blanking
+
+# Workspaces
+
+bspc config border_width         3
+bspc config normal_border_color   "#3b4252"
+# bspc config normal_border_color   "#2e3440"
+bspc config focused_border_color  "#88c0d0"
+bspc config presel_feedback_color "#88c0d0"
+bspc config window_gap          20
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config single_monocle       true
+
+
+bspc rule -a google-chrome desktop='^3'
+bspc rule -a spotify desktop='^4'
+bspc rule -a discord desktop='^5'
+bspc rule -a zoom desktop='^5' state=floating follow=on
+bspc rule -a Rofi state=floating
+bspc rule -a File-roller state=floating
+bspc rule -a "Picture in picture" state=floating
+
+# Start Polybar
+$HOME/.config/polybar/launch.bash &
+
+#sleep 0.69
+
+# Autostart applications:
+
+# Start Polybar
+# $HOME/.config/polybar/launch.bash &
+
+# Start floating kitty terminal
+# bspc rule -a \* -o state=floating && sleep 0.015 ; alacritty -e $SHELL -c "$HOME/.config/neofetch/launch-neofetch.sh && $SHELL" &
+
+#sleep 1.55 
+
+# Start firefox
+#/bin/bash -c "bspc desktop -f '^2' --follow ; bspc rule -a \* -o node=@$(bspc query -D -d):.focused split_dir=south follow=off ; firefox file:///home/$USER/.config/startpage/index.html &" &
+#bspc desktop -f '^2' --follow &
+

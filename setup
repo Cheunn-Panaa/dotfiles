@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$STOW_FOLDERS" ]; then
+    STOW_FOLDERS="alacritty,bspwm,dunst,eww,fish,neofetch,steeple,nvim,personal,picom,polybar,rofi,sxhkd"
+fi
+
+if [ -z "$DOTFILES" ]; then
+    DOTFILES="$HOME/dotfiles"
+fi
+
+STOW_FOLDERS="$STOW_FOLDERS" DOTFILES="$DOTFILES" "$DOTFILES/install"

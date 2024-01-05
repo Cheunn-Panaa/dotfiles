@@ -1,0 +1,1 @@
+/usr/local/kubectx/completion/kubectx.fish

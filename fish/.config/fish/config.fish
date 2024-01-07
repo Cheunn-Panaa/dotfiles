@@ -20,21 +20,29 @@ set -g theme_title_display_path yes
 set -g theme_title_use_abbreviated_path yes
 set -g theme_color_scheme solarized
 
-set -gx NPM_REGISTRY_SERVER https://nexus.internal.steeple.com/repository/npm-global-registry
-set -gx NPM_PUBLISH_REGISTRY https://nexus.internal.steeple.com/repository/steeple
-set -gx NPM_AUTH_TOKEN NpmToken.5a6cc8db-9a8d-31ed-a635-7e6532f0929b
-
-. ~/.config/fish/alias.fish
-
-source ~/.config/fish/steeple.fish
-source ~/.config/fish/alias.k8s.fish
-if [ -f $HOME/.config/fish/alias.fish ]
-    source $HOME/.config/fish/alias.fish
+## Aliases
+for f in ~/.config/fish/aliases/*.fish
+    source $f
 end
 
+
+## Functions
 for f in ~/.config/fish/functions/*.fish
     source $f
 end
+
+## Scripts  
+for f in ~/.config/fish/scripts/*.fish
+    source $f
+end
+
+## Current company fish config
+if test -d $HOME/.config/steeple/fish
+    for f in $HOME/.config/steeple/fish/*.fish
+        source  $f
+    end
+end
+## END Current company fish config
 
 # GoLang / Help: $ go help gopath
 set -x GOPATH $WORKSPACE/go

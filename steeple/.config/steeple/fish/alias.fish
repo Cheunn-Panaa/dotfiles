@@ -1,0 +1,10 @@
+alias db-ip='docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}" steeplelocal-obelix-postgres-1'
+
+alias steeple='cd /var/opt/steeple'
+alias local='cd /var/opt/steeple/steeple.local'
+alias bonemine='changeCodeContext /var/opt/steeple/steeple.local/bonemine'
+alias obelix='changeCodeContext /var/opt/steeple/steeple.local/obelix'
+alias webapp='steeple-lcl && docker-compose --profile web-app up -d'
+alias bonemine-bash='steeple-lcl && docker-compose run --rm bonemine bash'
+alias obelix-bash='steeple-lcl && docker-compose run --rm obelix bash'
+alias obelix-reset-db='./home/cheun-nourry/.config/scripts/reset-db.sh docker'

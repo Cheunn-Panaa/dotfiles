@@ -48,20 +48,24 @@ return require("packer").startup(function(use)
 	-- All-in-one formatter seems slow be carefull
 	use("mhartington/formatter.nvim")
 
-    -- git conflict
-    use {'akinsho/git-conflict.nvim', tag = "*", config = function()
-        require('git-conflict').setup()
-    end}
-    -- IDE sidebar Tree
-    use({
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        requires = { 
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
-    })
-
+	-- git conflict
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
+	use("MunifTanjim/prettier.nvim") -- prettier plugin for Neovim built-in LSP client
+	-- IDE sidebar Tree
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
+	})
 end)

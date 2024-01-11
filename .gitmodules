@@ -1,0 +1,3 @@
+[submodule "steeple/.config/steeple"]
+	path = steeple/.config/steeple
+	url = git@github.com:Cheunn-Panaa/steeple.git

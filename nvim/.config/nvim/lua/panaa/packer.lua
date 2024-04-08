@@ -24,9 +24,6 @@ return require("packer").startup(function(use)
 	-- Undo trash box
 	use("mbbill/undotree")
 
-	-- git wrapper
-	use("tpope/vim-fugitive")
-
 	-- Best LSP out there
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -48,7 +45,10 @@ return require("packer").startup(function(use)
 	-- All-in-one formatter seems slow be carefull
 	use("mhartington/formatter.nvim")
 
-	-- git conflict
+	-- git related stuff
+	-- git wrapper
+	use("tpope/vim-fugitive")
+
 	use({
 		"akinsho/git-conflict.nvim",
 		tag = "*",
@@ -56,7 +56,13 @@ return require("packer").startup(function(use)
 			require("git-conflict").setup()
 		end,
 	})
-	use("MunifTanjim/prettier.nvim") -- prettier plugin for Neovim built-in LSP client
+
+	use("lewis6991/gitsigns.nvim")
+
+	-- git blame
+	use("f-person/git-blame.nvim")
+
+	--use("MunifTanjim/prettier.nvim") -- prettier plugin for Neovim built-in LSP client
 	-- IDE sidebar Tree
 	use({
 		"nvim-neo-tree/neo-tree.nvim",

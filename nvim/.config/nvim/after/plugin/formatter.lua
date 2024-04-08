@@ -1,3 +1,49 @@
+--local conform = require("conform")
+--
+--conform.setup({
+--	formatters_by_ft = {
+--		javascript = { "prettier" },
+--		typescript = { "prettier" },
+--		javascriptreact = { "prettier" },
+--		typescriptreact = { "prettier" },
+--		-- Conform will run multiple formatters sequentially
+--		go = { "goimports", "gofmt" },
+--		css = { "prettier" },
+--		html = { "prettier" },
+--		json = { "prettier" },
+--		yaml = { "prettier" },
+--		markdown = { "prettier" },
+--		lua = { "stylua" },
+--		ruby = { "rubocop" },
+--		sql = { "sql_formatter" },
+--		terraform = { "terraform_fmt" },
+--	},
+--	format_on_save = {
+--		lsp_fallback = true,
+--		async = false,
+--		timeout_ms = 1000,
+--	},
+--	-- Set the log level. Use `:ConformInfo` to see the location of the log file.
+--	log_level = vim.log.levels.ERROR,
+--})
+--vim.keymap.set({ "n", "v" }, "<leader>f", function()
+--	conform.format({
+--		lsp_fallback = true,
+--		async = false,
+--		timeout_ms = 1000,
+--	})
+--end, { desc = "Format file or range (in visual mode)" })
+
+-- Format on save
+--local formatAutogroup = vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--	pattern = "*",
+--	callback = function(args)
+--		require("conform").format({ bufnr = args.buf })
+--	end,
+--	group = formatAutogroup,
+--})
+
 -- Utilities for creating configurations
 local util = require("formatter.util")
 

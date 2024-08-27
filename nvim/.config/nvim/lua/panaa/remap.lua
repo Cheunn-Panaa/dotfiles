@@ -46,15 +46,15 @@ vim.keymap.set({ "n", "i" }, "<C-s>", "<Esc>:w!<cr>")
 vim.keymap.set({ "n", "i" }, "<C-q>", "<Esc>:qa!<cr>")
 
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "q", "<nop>")
 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Navigate easily in the quickfix list
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+-- Update Packer
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/dotfiles/nvim/.config/nvim/lua/panaa/packer.lua<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()

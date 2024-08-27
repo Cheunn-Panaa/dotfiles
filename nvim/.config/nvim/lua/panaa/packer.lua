@@ -10,8 +10,14 @@ return require("packer").startup(function(use)
 	-- Fuzzy Finder
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
-		-- or                            , branch = '0.1.x',
+		tag = "0.1.x",
+		require("telescope").setup({
+			pickers = {
+				find_files = {
+					hidden = true,
+				},
+			},
+		}),
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -53,7 +59,17 @@ return require("packer").startup(function(use)
 		"akinsho/git-conflict.nvim",
 		tag = "*",
 		config = function()
-			require("git-conflict").setup()
+			require("git-conflict").setup({
+				debug = false,
+				default_mappings = true, -- disable buffer local mapping created by this plugin
+				default_commands = true, -- disable commands created by this plugin
+				disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
+				list_opener = "copen", -- command or function to open the conflicts list
+				highlights = { -- They must have background color, otherwise the default color will be used
+					incoming = "DiffAdd",
+					current = "DiffText",
+				},
+			})
 		end,
 	})
 
@@ -62,7 +78,6 @@ return require("packer").startup(function(use)
 	-- git blame
 	use("f-person/git-blame.nvim")
 
-	--use("MunifTanjim/prettier.nvim") -- prettier plugin for Neovim built-in LSP client
 	-- IDE sidebar Tree
 	use({
 		"nvim-neo-tree/neo-tree.nvim",

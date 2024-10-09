@@ -1,3 +1,5 @@
+-- Sidenote since i'm using alacritty there is close to no changes 
+-- when it comes to the terminal with this plugin
 function InitColor(color)
 	color = color or "nightfox"
 	vim.cmd.colorscheme(color)

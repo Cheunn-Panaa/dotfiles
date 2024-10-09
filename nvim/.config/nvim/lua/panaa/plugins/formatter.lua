@@ -92,14 +92,14 @@ return {
 			-- })
 
 			-- Format on save
-			local formatAutogroup = vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
-			vim.api.nvim_create_autocmd("BufWritePost", {
-				pattern = "*",
-				callback = function()
-					vim.cmd("FormatWrite")
-				end,
-				group = formatAutogroup,
-			})
+			--		local formatAutogroup = vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
+			--	vim.api.nvim_create_autocmd("BufWritePost", {
+			--		pattern = "*",
+			--		callback = function()
+			--			vim.cmd("FormatWrite")
+			--		end,
+			--		group = formatAutogroup,
+			--	})
 		end,
 	},
 }

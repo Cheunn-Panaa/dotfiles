@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$STOW_FOLDERS" ]; then
-    STOW_FOLDERS="alacritty,bspwm,dunst,eww,fish,neofetch,steeple,nvim,personal,picom,polybar,rofi,sxhkd"
+    STOW_FOLDERS="alacritty,fish,neofetch,steeple,nvim,personal,sxhkd"
 fi
 
 if [ -z "$DOTFILES" ]; then

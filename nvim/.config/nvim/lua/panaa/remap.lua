@@ -55,8 +55,6 @@ vim.keymap.set("n", "q", "<nop>")
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 
--- TODO: REMOVE Update Packer
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/dotfiles/nvim/.config/nvim/lua/panaa/packer.lua<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")

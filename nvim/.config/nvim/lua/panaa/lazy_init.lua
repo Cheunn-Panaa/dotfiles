@@ -19,5 +19,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = "panaa.plugins",
 	change_detection = { notify = false },
-	-- checker = { enabled = true },
+	--checker = { enabled = true },
 })

@@ -1,0 +1,16 @@
+
+- name: Install kubens & kubectx
+  tags:
+    - cli
+    - kube
+  ansible.builtin.apt:
+    pkg: kubectx
+    state: latest
+
+- name: Install kubens & kubectx
+  tags:
+    - cli
+    - kube
+  ansible.builtin.apt:
+    pkg: ster
+    state: latest

@@ -26,6 +26,7 @@ return {
 					"tsx",
 					"yaml",
 					"sql",
+                    "helm",
 
 					"ruby",
 					"vue",

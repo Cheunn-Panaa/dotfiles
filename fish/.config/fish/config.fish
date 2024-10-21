@@ -50,7 +50,7 @@ set -x GOPATH $WORKSPACE/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 set -gx PATH $HOME/.cargo/bin $PATH
 # RVM
-rvm default
+#rvm default
 
 
 direnv hook fish | source

@@ -14,6 +14,9 @@ vim.keymap.set("n", "<leader>L", "<C-w>L")
 vim.keymap.set("n", "<leader>J", "<C-w>J")
 vim.keymap.set("n", "<leader>K", "<C-w>K")
 
+-- Indentation
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 -- Allow to move selected parts up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

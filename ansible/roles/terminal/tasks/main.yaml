@@ -1,0 +1,24 @@
+- name: Install Alacritty (OpenGL terminal emulator)
+  tags:
+    - development
+    - terminal
+  ansible.builtin.apt:
+    pkg: alacritty
+    state: latest
+
+- name: Install Neovim
+  tags:
+    - development
+    - editor
+    - terminal
+  ansible.builtin.apt:
+    pkg: neovim
+    state: latest
+
+- name: Install Fish
+  tags:
+    - development
+    - terminal
+  ansible.builtin.apt:
+    pkg: fish
+    state: latest

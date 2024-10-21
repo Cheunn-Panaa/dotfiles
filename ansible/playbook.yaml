@@ -1,0 +1,14 @@
+---
+- name: Setup a new laptop
+  hosts: laptop
+  vars:
+    home_dir: "{{ lookup('env', 'HOME') }}"
+    linux_user: "{{ lookup('env', 'USER') }}"
+  roles:
+    - { role: terminal, become: true, tags: ["terminal"] }
+    - { role: common, become: true, tags: ["terminal"] }
+    - { role: go, become: true, tags: ["terminal"] }
+    - { role: container, become: true, tags: ["terminal"] }
+    - { role: monitoring, become: true, tags: ["terminal"] }
+  tasks:
+    - debug: msg="You are the user {{ lookup('env','USER') }}"

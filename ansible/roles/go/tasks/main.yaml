@@ -1,0 +1,4 @@
+- name: Install Golang
+  ansible.builtin.apt:
+    pkg: golang
+    state: latest

@@ -1,4 +1,4 @@
-eval (thefuck --alias | tr '\n' ';')
+#eval (thefuck --alias | tr '\n' ';')
 # Vscode context
 function changeCodeContext
   cd $1 &&
@@ -7,13 +7,13 @@ end
 
 function changeMineContext
   cd $1 &&
-    rubymine $1 -r 
+    rubymine $1 -r
 end
 
 # Pre-commit Alias
 alias pcommit-sample='ln -s ~/.config/pre-commit/basic.yaml .pre-commit-config.yaml'
 
-alias config='nvim ~/dotfiles' 
+alias config='nvim ~/dotfiles'
 
 # Docker Alias
 

@@ -1,0 +1,53 @@
+- name: Install bunch of common package
+  ansible.builtin.apt:
+    pkg: "{{packages}}"
+    state: latest
+  vars:
+    packages: 
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+    - python3-pip
+    - build-essential
+    - zip
+    - cmake
+    - pkg-config
+    - gnupg
+    - python3
+
+- name: Install direnv
+  tags:
+    - cli
+    - development
+    - environment-variables
+  ansible.builtin.apt:
+    pkg: direnv
+    state: latest
+
+- name: Install JQ
+  tags:
+    - cli
+    - development
+    - json
+  ansible.builtin.apt:
+    pkg: jq
+    state: latest
+      
+- name: Install neofetch
+  ansible.builtin.apt:
+    pkg: neofetch
+    state: latest
+
+- name: Install GNU Stow
+  tags:
+    - dotfiles
+  ansible.builtin.apt:
+    pkg: stow
+    state: latest
+
+- name: Remove useless packages from cache
+  tags:
+    - package-manager
+  ansible.builtin.apt: 
+    autoclean: true

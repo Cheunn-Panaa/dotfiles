@@ -1,4 +1,4 @@
--- return {
+return {
 -- 	{
 -- 		"epwalsh/obsidian.nvim",
 -- 		version = "v3.9.0", -- recommended, use latest release instead of latest commit
@@ -33,4 +33,4 @@
 -- 			-- see below for full list of options 👇
 -- 		},
 -- 	},
--- }
+}

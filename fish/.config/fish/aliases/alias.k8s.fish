@@ -2,6 +2,8 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export PS1='\u@\h \W $(kube_ps1)\$ '
 export PATH="$HOME/.kube/bin:$PATH"
 
+set -gx KUBECONFIG $HOME/.kube/config
+
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'

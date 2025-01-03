@@ -24,5 +24,5 @@ function _nvm_uninstall --on-event nvm_uninstall
 end
 
 if status is-interactive && set --query nvm_default_version && ! set --query nvm_current_version
-    nvm use --silent $nvm_default_version
+    nvm use --silent 20 #$nvm_default_version
 end

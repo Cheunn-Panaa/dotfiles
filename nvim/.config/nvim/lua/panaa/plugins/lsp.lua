@@ -190,6 +190,22 @@ return {
 								},
 							})
 						end,
+						helm_ls = function()
+							lsp_config.helm_ls.setup({
+								on_attach = function(client, bufnr)
+									if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+										vim.diagnostic.enable(false)
+									end
+								end,
+								settings = {
+									["helm-ls"] = {
+										yamlls = {
+											path = "yaml-language-server",
+										},
+									},
+								},
+							})
+						end,
 						volar = function()
 							lsp_config.volar.setup({
 								root_dir = util.root_pattern(".git")(fname),

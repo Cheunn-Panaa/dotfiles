@@ -17,7 +17,12 @@ tfsec ## terraform security
 ansible 
 stow
 venom
-alacritty OR kitty ????
+kitty ????
+
+hyprland
+cmake
+uwsm (<https://github.com/Vladimir-csp/uwsm.git)
 
 listing for ubuntu # TO DELETE SOON TM
+
 

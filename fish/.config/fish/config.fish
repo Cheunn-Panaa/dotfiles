@@ -4,6 +4,8 @@ set fish_greeting
 #so our brew install override the commands from the system
 set -x PATH /usr/local/sbin $PATH
 
+set -x KITTY_CONFIG_DIRECTORY ~/.config/kitty/kitty.conf
+set KUBECONFIG /home/nourry/.kube/config
 # Set locale
 set -gx LC_ALL en_GB.UTF-8
 set -gx LANG en_GB.UTF-8
@@ -44,6 +46,7 @@ if test -d $HOME/.config/steeple/fish
 end
 ## END Current company fish config
 
+set -x STARSHIP_CONFIG ~/dotfiles/starship.toml
 # GoLang / Help: $ go help gopath
 set -x GOPATH $WORKSPACE/go
 # So we can run go commands and go programs we have compiled ourselves
@@ -53,6 +56,6 @@ set -gx PATH $HOME/.cargo/bin $PATH
 #rvm default
 
 
-direnv hook fish | source
+#direnv hook fish | source
 
 starship init fish | source

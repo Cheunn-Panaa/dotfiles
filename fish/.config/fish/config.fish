@@ -22,6 +22,10 @@ set -g theme_title_display_path yes
 set -g theme_title_use_abbreviated_path yes
 set -g theme_color_scheme solarized
 
+# Golang
+set -gx GOPATH "$HOME/go"
+set -gx PATH "$GOPATH/bin" $PATH
+
 ## Aliases
 for f in ~/.config/fish/aliases/*.fish
     source $f

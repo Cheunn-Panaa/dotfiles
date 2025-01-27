@@ -6,8 +6,17 @@
 .Spotlight-V100
 .Trashes
 
+# WebStorm
+.idea/
+
+# vi
+*~
+
 # Misc      #
 #############
+log/
+*.log
+*.dump
 *.map
 .mx-start
 .direnv
